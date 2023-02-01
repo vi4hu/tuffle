@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/space_background.png" type="Texture" id=2]
+[ext_resource path="res://entities/spawners/enemy_spawner.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 152, 5 )
+
+[node name="MainGame" type="Node2D"]
+rotation = -0.00345015
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="SpaceBackground" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( -11, -6 )
+rotation = -0.00345015
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2.54857, 156.999 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1, -182 )
+current = true
+
+[node name="Bullet" type="Node" parent="."]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Boundary" type="Area2D" parent="."]
+position = Vector2( -0.351915, 101.999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary"]
+position = Vector2( -0.144906, -51.0002 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Boundary/CollisionShape2D"]
+position = Vector2( 2.915, 92 )
+scale = Vector2( 1.99699, 1 )
+color = Color( 0.733333, 0.470588, 0.0588235, 1 )
+polygon = PoolVector2Array( -152, -96, 152, -96, 152, -88, -152, -88 )
