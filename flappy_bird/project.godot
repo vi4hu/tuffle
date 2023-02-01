@@ -8,13 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Bird",
+"language": "GDScript",
+"path": "res://entities/bird/bird.gd"
+} ]
+_global_script_class_icons={
+"Bird": ""
+}
+
 [application]
 
 config/name="flappy_bird"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [display]
 
+window/size/test_width=1024
+window/size/test_height=600
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -32,8 +45,8 @@ jmp={
 
 [layer_names]
 
-2d_physics/layer_7="env"
-2d_physics/layer_8="player"
+2d_physics/layer_1="env"
+2d_physics/layer_2="player"
 
 [physics]
 

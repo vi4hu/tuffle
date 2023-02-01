@@ -22,3 +22,5 @@ polygon = PoolVector2Array( -5, -12, 7, -12, 7, -10, 9, -10, 9, -8, 11, -8, 11, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "fly"
+
+[node name="Tween" type="Tween" parent="."]
