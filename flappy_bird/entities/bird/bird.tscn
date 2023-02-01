@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/birdup.png" type="Texture" id=1]
+[ext_resource path="res://resources/birddown.png" type="Texture" id=2]
+[ext_resource path="res://entities/bird/bird.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "fly",
+"speed": 6.0
+} ]
+
+[node name="Bird" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -5, -12, 7, -12, 7, -10, 9, -10, 9, -8, 11, -8, 11, -6, 13, -6, 13, 0, 15, 0, 15, 2, 17, 2, 17, 4, 15, 4, 15, 8, 13, 8, 13, 10, 3, 10, 3, 12, -7, 12, -7, 10, -11, 10, -11, 8, -13, 8, -13, 4, -15, 4, -15, 2, -17, 2, -17, -4, -15, -4, -15, -6, -11, -6, -11, -8, -9, -8, -9, -10, -5, -10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "fly"
