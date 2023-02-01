@@ -9,5 +9,6 @@ func _setup() -> void:
 
 func _score(body: Node) -> void:
 	if body is Bird:
+		$Score.play()
 		var score: Label = get_tree().get_root().get_node("Main/C/Score")
 		score.set_text(str(int(score.get_text()) + 1))

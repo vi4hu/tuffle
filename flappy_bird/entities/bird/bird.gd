@@ -2,6 +2,7 @@ class_name Bird
 extends KinematicBody2D
 
 onready var animations = $AnimatedSprite
+onready var dead = $Dead
 
 var _max_speed := 140
 var _velocity : Vector2
@@ -20,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	_velocity.x = _max_speed
 
 	if Input.is_action_just_pressed("jmp"):
+		$Flap.play()
 		_velocity.y = _fly_power
 
 	_velocity = move_and_slide(_velocity)

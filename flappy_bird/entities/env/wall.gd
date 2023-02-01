@@ -12,5 +12,6 @@ func _setup() -> void:
 
 func _detected(body: Node) -> void:
 	if body is Bird:
+		body.dead.play()
 		get_tree().get_root().get_node("Main/C/Button").show()
 		get_tree().set_pause(true)
