@@ -13,7 +13,7 @@ animations = [ {
 } ]
 
 [node name="Bird" type="KinematicBody2D"]
-collision_layer = 2
+collision_layer = 4
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

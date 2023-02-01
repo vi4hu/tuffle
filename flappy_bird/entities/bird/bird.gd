@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 onready var animations = $AnimatedSprite
 
-var _max_speed := 100
+var _max_speed := 140
 var _velocity : Vector2
 var _fly_power := -200
 var _gravity_mul := 9.8

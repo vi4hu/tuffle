@@ -1,6 +1,6 @@
 extends Camera2D
 
-var _max_speed := 100
+var _max_speed := 140
 var _offset := Vector2(233.0, 300.0)
 
 
