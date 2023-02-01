@@ -1,7 +1,12 @@
+class_name Wall
 extends Area2D
 
 
 func _ready() -> void:
+	_setup()
+
+
+func _setup() -> void:
 	connect("body_entered", self, "_detected")
 
 

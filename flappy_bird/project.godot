@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Bird",
 "language": "GDScript",
 "path": "res://entities/bird/bird.gd"
+}, {
+"base": "Area2D",
+"class": "Wall",
+"language": "GDScript",
+"path": "res://entities/env/wall.gd"
 } ]
 _global_script_class_icons={
-"Bird": ""
+"Bird": "",
+"Wall": ""
 }
 
 [application]
